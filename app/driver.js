@@ -9,11 +9,11 @@ const RootView = View.extend({
   template: rootTemplate,
   
   regions: {
-    header: '#header-hook',
-    main: '#body-hook'
+    main: '#form-hook'
   },
   
   onRender() {
+    this.showChildView('main', new FormView())
   }
 });
 
