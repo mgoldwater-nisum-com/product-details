@@ -1,6 +1,6 @@
 import "./main.scss";
 import {Application, View} from 'backbone.marionette';
-import  {IndexView} from './views/index';
+import  SectionView from './views/section';
 import 'normalize.css';
 import './main.scss';
 import rootTemplate from './templates/rootTemplate.hbs';
@@ -9,11 +9,11 @@ const RootView = View.extend({
   template: rootTemplate,
   
   regions: {
-    main: '#form-hook'
+    main: '#section-hook'
   },
   
   onRender() {
-    this.showChildView('main', new FormView())
+    this.showChildView('main', new SectionView())
   }
 });
 
