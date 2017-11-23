@@ -4,7 +4,7 @@ const path = require('path');
 
 module.exports = {
   context: path.resolve(__dirname, "app"),
-  entry: './index.js',
+  entry: './driver.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
@@ -15,12 +15,16 @@ module.exports = {
   },
   module: {
     rules: [
+      { test: /\.hbs$/, loader: "handlebars-loader" },
+      { test: /\.css$/, use: ['style-loader', 'css-loader'] },
       { test: /\.scss$/, use: ['style-loader', 'css-loader','sass-loader'] },
       {test: /\.js/, exclude: /node_modules/, use: 'babel-loader'},
       {test: /\.jpg/, use: 'file-loader'}
     ]
   },
-  plugins: [new HtmlWebpackPlugin({
-    template: 'index.html' 
-  })]
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'index.html' 
+    })
+  ]
 };
