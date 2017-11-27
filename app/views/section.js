@@ -3,6 +3,7 @@ import sectionTemplate from '../templates/sectionTemplate.hbs';
 import ProductFormView from './productForm';
 import ShippingFormView from './shippingForm';
 import ProductInfoView from './productInfo';
+import ShippingInfoView from './shippingInfo';
 
 const SectionView = View.extend({
   template: sectionTemplate,
@@ -18,6 +19,7 @@ const SectionView = View.extend({
     this.showChildView('productForm', new ProductFormView());
     this.showChildView('shippingForm', new ShippingFormView());
     this.showChildView('productInfo', new ProductInfoView());
+    this.showChildView('shippingInfo', new ShippingInfoView());
   }
 });
 
