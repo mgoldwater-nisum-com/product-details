@@ -1,16 +1,19 @@
 import {View} from 'backbone.marionette';
 import sectionTemplate from '../templates/sectionTemplate.hbs';
-import FormView from './form';
+import ProductFormView from './productForm';
+import ShippingFormView from './shippingForm';
 
 const SectionView = View.extend({
   template: sectionTemplate,
 
   regions: {
-    form: '#form-hook'
+    productForm: '#productForm',
+    shippingForm: '#shippingForm'
   },
 
   onRender() {
-    this.showChildView('form', new FormView())
+    this.showChildView('productForm', new ProductFormView());
+    this.showChildView('shippingForm', new ShippingFormView());
   }
 });
 
