@@ -1,10 +1,7 @@
 import {Model} from 'backbone';
 
-const State = Model.extend({
+const ShippingState = Model.extend({
   defaults: {
-    size: 'Small',
-    color: 'Black',
-    quantity: 1,
     fullName: '',
     address: '',
     city: '',
@@ -14,6 +11,6 @@ const State = Model.extend({
   }
 });
 
-const state = new State();
+const shippingState = new ShippingState();
 
-export default state;
+export default shippingState;
