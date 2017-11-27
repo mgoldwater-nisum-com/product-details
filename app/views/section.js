@@ -32,7 +32,7 @@ const SectionView = View.extend({
     this.showChildView('productForm', new ProductFormView());
     this.showChildView('shippingForm', new ShippingFormView());
     this.showChildView('productInfo', new ProductInfoView({model: productState}));
-    this.showChildView('shippingInfo', new ShippingInfoView());
+    this.showChildView('shippingInfo', new ShippingInfoView({model: shippingState}));
   }
 });
 
