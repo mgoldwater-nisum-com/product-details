@@ -1,13 +1,22 @@
 <h1>Shipping Address</h1>
 <label for="fullName">Full Name:</label>
-<input name="fullName" id="fullName" type="text">
+<input name="fullName" id="fullName" type="text" value={{fullName}}>
+{{#unless fullNameValid}}
+  <p>You must enter a name</p>
+{{/unless}}
 <label for="address">Address: </label>
-<input name="address" id="address" type="text">
+<input name="address" id="address" type="text" value={{address}}>
+{{#unless addressValid}}
+  <p>You must enter an address</p>
+{{/unless}}
 <label for="city">City: </label>
-<input name="city" id="city" type="text">
+<input name="city" id="city" type="text" value={{city}}>
+{{#unless cityValid}}
+  <p>You must enter a city</p>
+{{/unless}}
 <label for="state">State: </label>
-<select name="state" id="state" name="state">
-  <option value="AL">Alabama</option>
+<select name="state" id="state" name="state" value={{state}}>
+  <option value="AL" selected>Alabama</option>
   <option value="AK">Alaska</option>
   <option value="AZ">Arizona</option>
   <option value="AR">Arkansas</option>
@@ -59,9 +68,12 @@
   <option value="WY">Wyoming</option>
 </select>
 <label for="zip">ZIP:</label>
-<input name="zip" id="zip" type="text">
+<input name="zip" id="zip" type="text" value={{zip}}>
+{{#unless zipValid}}
+  <p>You must enter a 5 character zip code</p>
+{{/unless}}
 <label for="country">Country:</label>
-<select name="country" id="country">
+<select name="country" id="country" value={{country}}>
     <option value="Afghanistan">Afghanistan</option>
     <option value="Albania">Albania</option>
     <option value="Algeria">Algeria</option>
