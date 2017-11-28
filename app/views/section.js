@@ -10,17 +10,6 @@ import shippingState from '../models/shippingState';
 const SectionView = View.extend({
   template: sectionTemplate,
 
-  events: {
-    'click #productButton': function(e){
-      console.log('productButton is clicked');
-      e.preventDefault();
-    },
-    'click #shippingButton': function(e){
-      console.log('shippingButton is clicked');
-      e.preventDefault();
-    }
-  },
-
   regions: {
     productForm: '#productForm',
     shippingForm: '#shippingForm',
@@ -29,8 +18,8 @@ const SectionView = View.extend({
   },
 
   onRender() {
-    this.showChildView('productForm', new ProductFormView());
-    this.showChildView('shippingForm', new ShippingFormView());
+    this.showChildView('productForm', new ProductFormView({model: productState, el: this.$('#productForm')}));
+    this.showChildView('shippingForm', new ShippingFormView({model: shippingState}));
     this.showChildView('productInfo', new ProductInfoView({model: productState}));
     this.showChildView('shippingInfo', new ShippingInfoView({model: shippingState}));
   }
