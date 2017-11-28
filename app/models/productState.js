@@ -11,6 +11,7 @@ const ProductState = Model.extend({
   localStorage: new LocalStorage('ProductState'),
   validate: function(attrs) {
     if (attrs.quantity < 1) {
+      this.set('quantity', attrs.quantity);
       return 'You can\'t buy less than 1 of an item';
     }
   }

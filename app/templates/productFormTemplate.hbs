@@ -1,18 +1,18 @@
 <label for="size">Size:</label>
 <select name="size" id="size">
-  <option value="Small">Small</option>
+  <option value="Small" selected>Small</option>
   <option value="Medium">Medium</option>
   <option value="Large">Large</option>
 </select>
 <label for="color">Color:</label>
 <select name="color" id="color">
-  <option value="Black">Black</option>
+  <option value="Black" selected>Black</option>
   <option value="Blue">Blue</option>
   <option value="Red">Red</option>
   <option value="Violet">Violet</option>
 </select>
 <label for="quantity">Quantity: </label>
-<input name="quantity" id="quantity" type="text">
+<input name="quantity" id="quantity" type="text" value={{quantity}}>
 {{#if invalid}}
   <p>You must buy at least 1 of an item</p>
 {{/if}}
