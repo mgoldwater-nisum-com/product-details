@@ -26,5 +26,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'index.html' 
     })
-  ]
+  ],
+  resolve: {
+    alias: {
+       handlebars: 'handlebars/dist/handlebars.min.js'
+    }
+  }
 };
