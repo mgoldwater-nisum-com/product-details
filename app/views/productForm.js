@@ -1,6 +1,6 @@
 import {View} from 'backbone.marionette';
 import productFormTemplate from '../templates/productFormTemplate.hbs';
-import setModelState from '../helpers/helpers';
+import setModelState from '../helpers/setModelState';
 
 const ProductFormView = View.extend({
   template: productFormTemplate,
