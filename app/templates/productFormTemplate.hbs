@@ -13,4 +13,7 @@
 </select>
 <label for="quantity">Quantity: </label>
 <input name="quantity" id="quantity" type="text">
+{{#if invalid}}
+  <p>You must buy at least 1 of an item</p>
+{{/if}}
 <button id="productButton">Buy Now</button>

@@ -6,6 +6,9 @@ const ProductFormView = View.extend({
   template: productFormTemplate,
   events: {
     'submit': setModelState
+  },
+  modelEvents: {
+    'change': 'render'
   }
 });
 
