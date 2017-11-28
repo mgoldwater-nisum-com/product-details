@@ -8,16 +8,12 @@ const ProductFormView = View.extend({
   },
   setProductState: function(e){
     e.preventDefault();
-    const arr = this.$el.serializeArray();
-    console.log(arr);
-    const data = arr.reduce( (dataToChange, currData) => {
-      console.log('currData is: ', currData);
+    const arrOfData = this.$el.serializeArray();
+    const formattedData = arrOfData.reduce( (dataToChange, currData) => {
       dataToChange[currData.name] = currData.value;
       return dataToChange;
     }, {});
-    console.log(data);
-    this.model.save(data);
-    // console.log(this.model);
+    this.model.save(formattedData);
   }
 });
 
