@@ -19,7 +19,7 @@ const SectionView = View.extend({
 
   onRender() {
     this.showChildView('productForm', new ProductFormView({model: productState, el: this.$('#productForm')}));
-    this.showChildView('shippingForm', new ShippingFormView({model: shippingState}));
+    this.showChildView('shippingForm', new ShippingFormView({model: shippingState, el: this.$('#shippingForm')}));
     this.showChildView('productInfo', new ProductInfoView({model: productState}));
     this.showChildView('shippingInfo', new ShippingInfoView({model: shippingState}));
   }
