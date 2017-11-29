@@ -9,13 +9,25 @@ const ProductFormView = View.extend({
     'submit': setModelState
   },
   modelEvents: {
-    'change': 'render'
+    'change': 'render',
+    'invalid': 'onInvalid',
+    'sync': 'onSync'
   },
+
+  onInvalid: function() {
+    this.model.set('invalid', true);
+  },
+
   onRender: function(){
     $('#size[selected]').attr('selected', false);
     $('#size').val(this.model.get('size')).attr('selected', true);
     $('#color[selected]').attr('selected', false);
     $('#color').val(this.model.get('color')).attr('selected', true);
+  },
+
+  onSync: function() {
+    this.model.set('invalid', false);
+    $('#shippingForm').show();
   }
 });
 

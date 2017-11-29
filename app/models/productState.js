@@ -19,13 +19,5 @@ const ProductState = Model.extend({
 });
 
 const productState = new ProductState();
-productState.on("invalid", function(model){
-  model.set('invalid', true);
-});
-
-productState.on("sync", function(model){
-  model.set('invalid', false);
-  $('#shippingForm').show();
-});
 
 export default productState;
