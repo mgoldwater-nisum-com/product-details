@@ -1,3 +1,54 @@
-img {
-  height: 100px;
+.title {
+  text-align: center;
+}
+
+.main {
+  width: 75%;
+}
+
+.dress {
+  height: 300px;
+  display: inline-block;
+}
+
+#productForm {
+  width: 50px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.formContainer {
+  margin-bottom: 20px;
+}
+
+#quantity {
+  width: 100px;
+}
+
+.error {
+  color: red;
+  width: 100px;
+  margin-top: -10px; 
+}
+
+#productButton {
+  width: 100px;
+}
+
+
+
+// img {
+//   display: inline-block;
+// }
+
+// label {
+//   display: inline-block;
+// }
+
+// form {
+//   display: inline-block;
+// }
+
+#size {
+  display: inline-block;
 }
