@@ -3,8 +3,8 @@ const webpackConfig = require('./webpack.config.js');
 module.exports = function(config) {
   config.set({
     basePath: "",
-    files: ["tests/**/*.test.js"],
-    frameworks: ['jasmine', 'jasmine-matchers'],
+    files: ["tests/**/*.test.js", 'spec/javascripts/fixtures/*.html'],
+    frameworks: ['jasmine-jquery', 'jasmine', 'jasmine-matchers'],
     preprocessors: {
       "tests/**/*.test.js": ["webpack"]
     },
@@ -12,6 +12,7 @@ module.exports = function(config) {
     plugins : [
       'karma-chrome-launcher',
       'karma-jasmine',
+      'karma-jasmine-jquery',
       'karma-jasmine-matchers',
       'karma-webpack',
       'karma-jasmine-html-reporter'
