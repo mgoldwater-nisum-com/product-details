@@ -2,7 +2,7 @@ import {Model} from 'backbone';
 import {LocalStorage} from 'backbone.localstorage';
 import $ from 'jquery';
 
-const ProductState = Model.extend({
+export const ProductState = Model.extend({
   defaults: {
     size: 'Small',
     color: 'Black',
