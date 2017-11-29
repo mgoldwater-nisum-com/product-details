@@ -9,13 +9,18 @@ const ShippingFormView = View.extend({
     'submit': setModelState
   },
   modelEvents: {
-    'change': 'render'
+    'change': 'render',
+    'sync': 'onSync'
   },
   onRender: function() {
     $('#country[selected]').attr('selected', false);
     $('#country').val(this.model.get('country')).attr('selected', true);
     $('#state[selected]').attr('selected', false);
     $('#state').val(this.model.get('state')).attr('selected', true);
+  },
+
+  onSync: function() {
+    $('#displayInfo').show();
   }
 });
 
