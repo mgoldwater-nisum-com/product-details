@@ -19,10 +19,7 @@ const ShippingState = Model.extend({
     const errors = {};
     for (let key in attrs) {
       this.set(key, attrs[key]);
-      if ((key === 'fullName' || key === 'city') && !attrs[key].length && !/[^a-z]/gi.test(attrs[key])) { 
-        errors[key + 'Valid'] = true;
-      }
-      if (key === 'address' && !attrs[key].length) {
+      if ((key === 'fullName' || key === 'city' || key === 'address') && !attrs[key].length) { 
         errors[key + 'Valid'] = true;
       }
       if (key === 'zip' && (attrs[key].length !== 5 || attrs[key].length === 5 &&  /[^0-9]/gi.test(attrs[key]))) {
