@@ -25,7 +25,8 @@ const ShippingState = Model.extend({
       if (key === 'address' && !attrs[key].length) {
         errors[key + 'Valid'] = true;
       }
-      if (key === 'zip' && (attrs[key].length !== 5 && !/[^0-9]/g.test(attrs[key]))) {
+      if (key === 'zip' && (attrs[key].length !== 5 || attrs[key].length === 5 &&  /[^0-9]/gi.test(attrs[key]))) {
+        console.log('says zip is invalid.')
         errors[key + 'Valid'] = true;
       }
     }
