@@ -3,10 +3,10 @@ const webpackConfig = require('./webpack.config.js');
 module.exports = function(config) {
   config.set({
     basePath: "",
-    files: ["tests/**/*.test.js"],
+    files: ["app/**/*.test.js"],
     frameworks: ['jasmine'],
     preprocessors: {
-      "tests/**/*.test.js": ["webpack"]
+      "app/**/*.test.js": ["webpack"]
     },
     webpack: webpackConfig,
     plugins : [
