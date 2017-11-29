@@ -1,5 +1,6 @@
 import {Model} from 'backbone';
 import {LocalStorage} from 'backbone.localstorage';
+import $ from 'jquery';
 
 const ProductState = Model.extend({
   defaults: {
@@ -24,6 +25,7 @@ productState.on("invalid", function(model){
 
 productState.on("sync", function(model){
   model.set('invalid', false);
+  $('#shippingForm').show();
 });
 
 export default productState;
