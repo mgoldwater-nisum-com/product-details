@@ -1,7 +1,7 @@
 import {Model} from 'backbone';
 import {LocalStorage} from 'backbone.localstorage';
 
-const ShippingState = Model.extend({
+export const ShippingState = Model.extend({
   defaults: {
     fullName: '',
     fullNameValid: true,
