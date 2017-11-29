@@ -4,7 +4,7 @@ module.exports = function(config) {
   config.set({
     basePath: "",
     files: ["tests/**/*.test.js"],
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine', 'jasmine-matchers'],
     preprocessors: {
       "tests/**/*.test.js": ["webpack"]
     },
@@ -12,6 +12,7 @@ module.exports = function(config) {
     plugins : [
       'karma-chrome-launcher',
       'karma-jasmine',
+      'karma-jasmine-matchers',
       'karma-webpack',
       'karma-jasmine-html-reporter'
       ],
