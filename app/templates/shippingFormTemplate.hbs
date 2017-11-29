@@ -1,6 +1,8 @@
-<h1>Shipping Address</h1>
-<label for="fullName">Full Name:</label>
-<input name="fullName" id="fullName" type="text" value={{fullName}}>
+<h1 class="shippingTitle">Shipping Address</h1>
+<div class="shippingOption">
+  <label for="fullName">Full Name:</label>
+  <input name="fullName" id="fullName" type="text" value={{fullName}}>
+</div>
 {{#unless fullNameValid}}
   <p>You must enter a name</p>
 {{/unless}}

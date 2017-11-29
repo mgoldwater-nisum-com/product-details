@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.main {
+.productSelection {
   width: 75%;
 }
 
@@ -35,6 +35,15 @@
   width: 100px;
 }
 
+.shippingTitle {
+  text-align: center;
+}
+
+.shippingOption {
+  display: block;
+  margin-bottom: 15px;
+}
+
 
 
 // img {
@@ -49,6 +58,3 @@
 //   display: inline-block;
 // }
 
-#size {
-  display: inline-block;
-}
