@@ -15,6 +15,7 @@ module.exports = {
   },
   module: {
     rules: [
+      {test: /\.html$/, loader: 'html-loader'},
       { test: /\.hbs$/, loader: "handlebars-loader" },
       { test: /\.css$/, use: ['style-loader', 'css-loader'] },
       { test: /\.scss$/, use: ['style-loader', 'css-loader','sass-loader'] },
