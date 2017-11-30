@@ -25,7 +25,7 @@
   width: 100px;
 }
 
-.error {
+.productError {
   color: red;
   width: 100px;
   margin-top: -10px; 
@@ -42,9 +42,34 @@
 .shippingOption {
   display: block;
   margin-bottom: 15px;
+  margin-left: 10%;
 }
 
+.shippingLabel {
+  display: block;
+  margin-bottom: 5px;
+}
 
+.shippingInput {
+  width: 90%;
+}
+
+.shippingSelect {
+  width: 92%;
+}
+
+// #country {
+//   width: 200px;
+// }
+
+.shippingError {
+  color: red;
+  margin-left: 10%;
+}
+
+#shippingButton {
+  margin-left: 10%;
+}
 
 // img {
 //   display: inline-block;
