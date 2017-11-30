@@ -117,15 +117,8 @@
   }
 }
 
-// img {
-//   display: inline-block;
-// }
-
-// label {
-//   display: inline-block;
-// }
-
-// form {
-//   display: inline-block;
-// }
-
+@media (min-width: 1280px) {
+  .dress {
+    margin-left: 48%;
+  }
+}
