@@ -1,3 +1,123 @@
-img {
-  height: 100px;
+.title {
+  text-align: center;
+}
+
+.productSelection {
+  width: 75%;
+}
+
+.dress {
+  height: 300px;
+  display: inline-block;
+}
+
+#productForm {
+  width: 50px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.formContainer {
+  margin-bottom: 20px;
+}
+
+#quantity {
+  width: 100px;
+}
+
+.productError {
+  color: red;
+  width: 100px;
+  margin-top: -10px; 
+}
+
+#productButton {
+  width: 100px;
+}
+
+.shippingTitle {
+  text-align: center;
+}
+
+.shippingOption {
+  display: block;
+  margin-bottom: 15px;
+  margin-left: 10%;
+}
+
+.shippingLabel {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.shippingInput {
+  width: 90%;
+}
+
+.shippingSelect {
+  width: 92%;
+}
+
+.shippingError {
+  color: red;
+  margin-left: 10%;
+}
+
+#shippingButton {
+  margin-left: 10%;
+}
+
+.summaryHeadingContainer {
+  text-align: center;
+}
+
+.summaryItem {
+  margin-left: 10%;
+}
+
+.summaryHeading {
+  text-align: center;
+}
+
+#displayInfo {
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .dress {
+    margin-left: 30%;
+    margin-top: 25px;
+  }
+
+  #productForm {
+    margin-top: 25px;
+  }
+
+  #displayProductInfo, #displayShippingInfo {
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
+  }
+
+  .summaryHeadingContainer {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .summaryGrouping {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .summaryItem {
+    margin-left: 40%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .dress {
+    margin-left: 48%;
+  }
 }
