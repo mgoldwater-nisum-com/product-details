@@ -1,21 +1,21 @@
 <h1 class="shippingTitle">Shipping Address</h1>
 <div class="shippingOption">
   <label class="shippingLabel" for="fullName">Full Name:</label>
-  <input class="shippingInput" name="fullName" id="fullName" type="text" value={{fullName}}>
+  <input class="shippingInput" name="fullName" id="fullName" type="text" value="{{fullName}}">
 </div>
 {{#unless fullNameValid}}
   <p class="shippingError">You must enter a name</p>
 {{/unless}}
 <div class="shippingOption">
   <label class="shippingLabel" for="address">Address: </label>
-  <input class="shippingInput" name="address" id="address" type="text" value={{address}}>
+  <input class="shippingInput" name="address" id="address" type="text" value="{{address}}">
 </div>
 {{#unless addressValid}}
   <p class="shippingError">You must enter an address</p>
 {{/unless}}
 <div class="shippingOption">
   <label class="shippingLabel" for="city">City: </label>
-  <input class="shippingInput" name="city" id="city" type="text" value={{city}}>
+  <input class="shippingInput" name="city" id="city" type="text" value="{{city}}">
 </div>
 {{#unless cityValid}}
   <p class="shippingError">You must enter a city</p>
@@ -77,7 +77,7 @@
 </div>
 <div class="shippingOption">
   <label class="shippingLabel" for="zip">ZIP:</label>
-  <input class="shippingInput" name="zip" id="zip" type="text" value={{zip}}>
+  <input class="shippingInput" name="zip" id="zip" type="text" value="{{zip}}">
 </div>
 {{#unless zipValid}}
   <p class="shippingError">You must enter 5 numerical characters</p>
