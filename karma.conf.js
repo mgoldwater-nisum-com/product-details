@@ -12,8 +12,7 @@ module.exports = function(config) {
     frameworks: ['jasmine-jquery', 'jasmine', 'jasmine-matchers'],
     preprocessors: {
       "app/**/*.test.js": ['webpack'],
-      '**/*.hbs': ['handlebars', 'webpack'],
-      // 'spec/javascripts/fixtures/*.html': ["webpack"]
+      '**/*.hbs': ['handlebars', 'webpack']
     },
     handlebarsPreprocessor: {
       templates: "Handlebars.templates"
