@@ -1,4 +1,4 @@
-import {ProductState} from '../app/models/productState';
+import {ProductState} from './productState';
 
 const testProductState = new ProductState();
 

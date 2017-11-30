@@ -1,4 +1,4 @@
-import {ShippingState} from '../app/models/shippingState';
+import {ShippingState} from './shippingState';
 
 const testShippingState = new ShippingState();
 
