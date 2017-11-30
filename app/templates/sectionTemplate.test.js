@@ -2,7 +2,7 @@ import rootTemplate from './rootTemplate.hbs';
 import sectionTemplate from './sectionTemplate.hbs';
 
 // jasmine.getFixtures().fixturesPath = 'base/spec/javascripts/fixtures';
-jasmine.getFixtures().fixturesPath = 'base/app/templates/rootTemplate';
+jasmine.getFixtures().fixturesPath = 'base/app/templates/';
 
 describe('section view UI tests', function(){
 
