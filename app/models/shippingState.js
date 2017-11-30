@@ -34,16 +34,4 @@ export const ShippingState = Model.extend({
 
 const shippingState = new ShippingState();
 
-shippingState.on("invalid", function(model){
-  const validationFields = new Set(['fullName', 'address', 'city', 'zip']);
-  let validationErrors = model.validationError;
-  for (let item of validationFields) {
-    if (validationErrors.hasOwnProperty(item + 'Valid')) {
-      model.set(item + 'Valid', false);
-    } else {
-      model.set(item + 'Valid', true);
-    }
-  }
-});
-
 export default shippingState;

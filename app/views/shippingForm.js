@@ -10,7 +10,20 @@ const ShippingFormView = View.extend({
   },
   modelEvents: {
     'change': 'render',
-    'sync': 'onSync'
+    'sync': 'onSync',
+    'invalid': 'onInvalid'
+  },
+
+  onInvalid: function(){
+    const validationFields = new Set(['fullName', 'address', 'city', 'zip']);
+    let validationErrors = this.model.validationError;
+    for (let item of validationFields) {
+      if (validationErrors.hasOwnProperty(item + 'Valid')) {
+        this.model.set(item + 'Valid', false);
+      } else {
+        this.model.set(item + 'Valid', true);
+      }
+    }
   },
   onRender: function() {
     $('#country[selected]').attr('selected', false);
