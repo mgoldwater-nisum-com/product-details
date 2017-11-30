@@ -77,7 +77,7 @@
 </div>
 <div class="shippingOption">
   <label class="shippingLabel" for="zip">ZIP:</label>
-  <input class="shippingInput" name="zip" id="zip" type="text" value="{{zip}}">
+  <input type="number" shippingInput" name="zip" id="zip" type="text" value="{{zip}}">
 </div>
 {{#unless zipValid}}
   <p class="shippingError">You must enter 5 numerical characters</p>
