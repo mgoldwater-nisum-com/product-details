@@ -4,15 +4,15 @@ module.exports = function(config) {
   config.set({
     basePath: "",
     files: [
-      {pattern: "app/**/*.test.js", watched:true,served:true,included:true}, {pattern: 'spec/javascripts/fixtures/*.html', watched:true,served:true,included:true},
-      'node_modules/handlebars/dist/handlebars.min.js',
+      {pattern: "app/**/*.test.js", watched:true,served:true,included:true}, {pattern: 'spec/javascripts/fixtures/*.hbs', watched:true,served:true,included:false},
       './app/templates/*.hbs',
-      './node_modules/jquery/dist/jquery.min.js'
+      'node_modules/handlebars/dist/handlebars.min.js',
+      './node_modules/jquery/dist/jquery.min.js',
     ],
     frameworks: ['jasmine-jquery', 'jasmine', 'jasmine-matchers'],
     preprocessors: {
-      "app/**/*.test.js": ["webpack"],
-      '**/*.hbs': 'handlebars'
+      "app/**/*.test.js": ['webpack'],
+      '**/*.hbs': ['handlebars', 'webpack'],
       // 'spec/javascripts/fixtures/*.html': ["webpack"]
     },
     handlebarsPreprocessor: {
