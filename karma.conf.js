@@ -15,7 +15,9 @@ module.exports = function(config) {
       '**/*.hbs': 'handlebars'
       // 'spec/javascripts/fixtures/*.html': ["webpack"]
     },
-
+    handlebarsPreprocessor: {
+      templates: "Handlebars.templates"
+    }, 
     webpack: webpackConfig,
     plugins : [
       'karma-handlebars-preprocessor',
