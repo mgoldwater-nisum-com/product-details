@@ -14,11 +14,11 @@ const ShippingFormView = View.extend({
     'invalid': 'onInvalid'
   },
 
-  onInvalid: function(){
+  onInvalid: function() {
     const validationFields = new Set(['fullName', 'address', 'city', 'zip']);
     let validationErrors = this.model.validationError;
     for (let item of validationFields) {
-      if (validationErrors.hasOwnProperty(item + 'Valid')) {
+      if (validationErrors && validationErrors.hasOwnProperty(item + 'Valid')) {
         this.model.set(item + 'Valid', false);
       } else {
         this.model.set(item + 'Valid', true);
@@ -33,6 +33,7 @@ const ShippingFormView = View.extend({
   },
 
   onSync: function() {
+    this.onInvalid();
     $('#displayInfo').show();
   }
 });
