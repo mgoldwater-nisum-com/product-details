@@ -11,7 +11,7 @@ export const ProductState = Model.extend({
   },
   localStorage: new LocalStorage('ProductState'),
   validate: function(attrs) {
-    if (attrs.quantity < 1) {
+    if (attrs.quantity < 1 || /[^0-9]/g.test(attrs.quantity)) {
       this.set('quantity', attrs.quantity);
       return 'You can\'t buy less than 1 of an item';
     }
