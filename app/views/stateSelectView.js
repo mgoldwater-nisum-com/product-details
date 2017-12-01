@@ -1,13 +1,13 @@
-import {CollectionView} from 'backbone.marionette';
-import StateOptionView from './stateOptionView';
+import {View} from 'backbone.marionette';
+import StateSelectTemplate from '../templates/stateSelectTemplate.hbs';
 
-const StateSelectView = CollectionView.extend({
+const StateSelectView = View.extend({
   tagName: 'select',
   className: 'shippingSelect',
   attributes: {
     name: 'state'
   },
-  childView: StateOptionView
+  template: StateSelectTemplate
 })
 
 export default StateSelectView;
