@@ -26,7 +26,7 @@ const ProductFormView = View.extend({
   },
 
   onSync: function() {
-    this.triggerMethod('submit', this);
+    this.triggerMethod('submitProduct', this);
     this.model.set('invalid', false);
   }
 });

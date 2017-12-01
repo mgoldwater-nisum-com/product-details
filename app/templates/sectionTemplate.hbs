@@ -10,9 +10,16 @@
       <form id="shippingForm" action=""></form>
     {{/if}}
   </section>
-  <section id="displayInfo" hidden>
-    <div id="displayProductInfo"></div>
-    <div id="displayShippingInfo"></div>
-  </section>
+  {{#if hiddenDisplayInfo}}
+    <section id="displayInfo" hidden>
+      <div id="displayProductInfo"></div>
+      <div id="displayShippingInfo"></div>
+    </section>
+  {{else}}
+    <section id="displayInfo">
+      <div id="displayProductInfo"></div>
+      <div id="displayShippingInfo"></div>
+    </section>
+  {{/if}}
 </main>
 

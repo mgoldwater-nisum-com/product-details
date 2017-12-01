@@ -33,8 +33,8 @@ const ShippingFormView = View.extend({
   },
 
   onSync: function() {
+    this.triggerMethod('submitDisplay', this);
     this.onInvalid();
-    $('#displayInfo').show();
   }
 });
 

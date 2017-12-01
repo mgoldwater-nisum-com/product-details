@@ -21,8 +21,12 @@ const SectionView = View.extend({
     change: 'render'
   },
 
-  onChildviewSubmit: function(){
+  onChildviewSubmitProduct: function(){
     this.model.set('hiddenProductForm', '');
+  },
+
+  onChildviewSubmitDisplay: function(){
+    this.model.set('hiddenDisplayInfo', '');
   },
 
   onRender() {
