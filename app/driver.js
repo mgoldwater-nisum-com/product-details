@@ -4,6 +4,7 @@ import  SectionView from './views/sectionView';
 import 'normalize.css';
 import './main.scss';
 import rootTemplate from './templates/rootTemplate.hbs';
+import sectionState from './models/sectionState';
 
 const RootView = View.extend({
   template: rootTemplate,
@@ -13,7 +14,7 @@ const RootView = View.extend({
   },
   
   onRender() {
-    this.showChildView('main', new SectionView())
+    this.showChildView('main', new SectionView({model: sectionState}));
   }
 });
 

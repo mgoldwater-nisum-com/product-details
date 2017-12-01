@@ -4,7 +4,11 @@
     <form id="productForm" action=""></form>
   </section>
   <section>
-    <form id="shippingForm" action="" hidden></form>
+    {{#if hiddenProductForm}}
+      <form id="shippingForm" action="" hidden></form>
+    {{else}}
+      <form id="shippingForm" action=""></form>
+    {{/if}}
   </section>
   <section id="displayInfo" hidden>
     <div id="displayProductInfo"></div>
