@@ -4,14 +4,14 @@ module.exports = function(config) {
   config.set({
     basePath: "",
     files: [
-      {pattern: "tests/**/*.test.js", watched:true,served:true,included:true}, {pattern: 'spec/javascripts/fixtures/*.html', watched:true,served:true,included:true},
+      {pattern: "app/**/*.test.js", watched:true,served:true,included:true}, {pattern: 'spec/javascripts/fixtures/*.html', watched:true,served:true,included:true},
       'node_modules/handlebars/dist/handlebars.min.js',
       './app/templates/*.hbs',
       './node_modules/jquery/dist/jquery.min.js'
     ],
     frameworks: ['jasmine-jquery', 'jasmine', 'jasmine-matchers'],
     preprocessors: {
-      "tests/**/*.test.js": ["webpack"],
+      "app/**/*.test.js": ["webpack"],
       '**/*.hbs': 'handlebars'
       // 'spec/javascripts/fixtures/*.html': ["webpack"]
     },
