@@ -22,11 +22,8 @@
 {{/unless}}
 <div class="shippingOption">
   <label class="shippingLabel" for="state">State: </label>
-  <select class="shippingSelect" name="state" id="state" name="state" value={{state}}>
-    {{#each stateData}}
-      <option>{{stateData.item}}</option>
-    {{/each}}
-  </select>
+  <div id="stateSelect">
+  </div>
 </div>
 <div class="shippingOption">
   <label class="shippingLabel" for="zip">ZIP:</label>
@@ -37,7 +34,7 @@
 {{/unless}}
 <div class="shippingOption">
   <label class="shippingLabel" for="country">Country:</label>
-  <select class="shippingSelect" name="country" id="country" value={{country}}>
+  <select id="countrySelect" class="shippingSelect" name="country" id="country" value={{country}}>
     <option value="Afghanistan">Afghanistan</option>
     <option value="Albania">Albania</option>
     <option value="Algeria">Algeria</option>

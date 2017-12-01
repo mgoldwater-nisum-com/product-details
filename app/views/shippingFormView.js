@@ -1,10 +1,17 @@
 import {View} from 'backbone.marionette';
 import shippingFormTemplate from '../templates/shippingFormTemplate.hbs';
 import setModelState from '../helpers/setModelState';
+import StateSelectView from './stateSelectView';
 import $ from 'jquery';
 
 const ShippingFormView = View.extend({
   template: shippingFormTemplate,
+
+  regions: {
+    stateSelect: '#stateSelect',
+    // countrySelect: '#countrySelect'
+  },
+
   events: {
     'submit': setModelState
   },
@@ -25,12 +32,9 @@ const ShippingFormView = View.extend({
       }
     }
   },
-  // onRender: function() {
-  //   $('#country[selected]').attr('selected', false);
-  //   $('#country').val(this.model.get('country')).attr('selected', true);
-  //   $('#state[selected]').attr('selected', false);
-  //   $('#state').val(this.model.get('state')).attr('selected', true);
-  // },
+  onRender: function() {
+    this.showChildView('stateSelect', new StateSelectView());
+  },
 
   onSync: function() {
     this.triggerMethod('submitDisplay', this);
