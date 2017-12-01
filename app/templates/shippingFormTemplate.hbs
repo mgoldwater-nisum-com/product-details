@@ -24,6 +24,7 @@
   <label class="shippingLabel" for="state">State: </label>
   <select class="shippingSelect" name="state" id="state" name="state" value={{state}}>
     {{#each stateData}}
+      <option>{{stateData.item}}</option>
     {{/each}}
   </select>
 </div>

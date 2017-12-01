@@ -1,9 +1,4 @@
-const stateData = ['<option value="AL">Alabama</option>',
-'<option value="AK">Alaska</option>',
-'<option value="AZ">Arizona</option>',
-'<option value="AR">Arkansas</option>',
-
-]
+const stateData = [{item: 'Alabama'}, {item: 'Alaska'}]
 
 export default stateData;
 
@@ -17,6 +12,10 @@ export default stateData;
 //   }
 // }
 /*
+'<option value="AL">Alabama</option>',
+'<option value="AK">Alaska</option>',
+'<option value="AZ">Arizona</option>',
+'<option value="AR">Arkansas</option>',
 '<option value="CA">California</option>',
 '<option value="CO">Colorado</option>',
 '<option value="CT">Connecticut</option>',
