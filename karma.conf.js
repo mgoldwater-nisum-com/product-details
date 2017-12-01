@@ -4,7 +4,7 @@ module.exports = function(config) {
   config.set({
     basePath: "",
     files: [
-      {pattern: "app/**/*.test.js", watched:true,served:true,included:true}, {pattern: 'spec/javascripts/fixtures/*.html', watched:true,served:true,included:true},
+      {pattern: "app/**/*.test.js", watched:true,served:true,included:true},
       'node_modules/handlebars/dist/handlebars.min.js',
       './app/templates/*.hbs',
       './node_modules/jquery/dist/jquery.min.js'
@@ -13,7 +13,6 @@ module.exports = function(config) {
     preprocessors: {
       "app/**/*.test.js": ["webpack"],
       '**/*.hbs': 'handlebars'
-      // 'spec/javascripts/fixtures/*.html': ["webpack"]
     },
     handlebarsPreprocessor: {
       templates: "Handlebars.templates"
