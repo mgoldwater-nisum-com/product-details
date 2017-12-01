@@ -19,10 +19,10 @@ const ProductFormView = View.extend({
   },
 
   onRender: function(){
-    $('#size[selected]').attr('selected', false);
-    $('#size').val(this.model.get('size')).attr('selected', true);
-    $('#color[selected]').attr('selected', false);
-    $('#color').val(this.model.get('color')).attr('selected', true);
+    // $('#size[selected]').attr('selected', false);
+    // $('#size').val(this.model.get('size')).attr('selected', true);
+    // $('#color[selected]').attr('selected', false);
+    // $('#color').val(this.model.get('color')).attr('selected', true);
   },
 
   onSync: function() {

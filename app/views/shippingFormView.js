@@ -25,12 +25,12 @@ const ShippingFormView = View.extend({
       }
     }
   },
-  onRender: function() {
-    $('#country[selected]').attr('selected', false);
-    $('#country').val(this.model.get('country')).attr('selected', true);
-    $('#state[selected]').attr('selected', false);
-    $('#state').val(this.model.get('state')).attr('selected', true);
-  },
+  // onRender: function() {
+  //   $('#country[selected]').attr('selected', false);
+  //   $('#country').val(this.model.get('country')).attr('selected', true);
+  //   $('#state[selected]').attr('selected', false);
+  //   $('#state').val(this.model.get('state')).attr('selected', true);
+  // },
 
   onSync: function() {
     this.triggerMethod('submitDisplay', this);
