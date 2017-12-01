@@ -1,9 +1,9 @@
 import {View} from 'backbone.marionette';
 import sectionTemplate from '../templates/sectionTemplate.hbs';
-import ProductFormView from './productForm';
-import ShippingFormView from './shippingForm';
-import ProductInfoView from './productInfo';
-import ShippingInfoView from './shippingInfo';
+import ProductFormView from './productFormView';
+import ShippingFormView from './shippingFormView';
+import ProductInfoView from './productInfoView';
+import ShippingInfoView from './shippingInfoView';
 import productState from '../models/productState';
 import shippingState from '../models/shippingState';
 

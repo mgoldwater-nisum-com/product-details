@@ -1,6 +1,6 @@
 import "./main.scss";
 import {Application, View} from 'backbone.marionette';
-import  SectionView from './views/section';
+import  SectionView from './views/sectionView';
 import 'normalize.css';
 import './main.scss';
 import rootTemplate from './templates/rootTemplate.hbs';

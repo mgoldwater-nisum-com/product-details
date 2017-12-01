@@ -1,5 +1,5 @@
 import {ProductState} from '../models/productState';
-import ProductFormView from './productForm';
+import ProductFormView from './productFormView';
 import setModelState from '../helpers/setModelState';
 
 describe('Product Form View events', function() {

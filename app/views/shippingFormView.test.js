@@ -1,4 +1,4 @@
-import ShippingFormView from './shippingForm';
+import ShippingFormView from './shippingFormView';
 import {ShippingState} from '../models/shippingState';
 
 describe('ShippingFormView tests', function(){
