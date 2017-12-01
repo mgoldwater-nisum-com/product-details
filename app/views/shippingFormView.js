@@ -2,7 +2,6 @@ import {View} from 'backbone.marionette';
 import shippingFormTemplate from '../templates/shippingFormTemplate.hbs';
 import setModelState from '../helpers/setModelState';
 import StateSelectView from './stateSelectView';
-import $ from 'jquery';
 
 const ShippingFormView = View.extend({
   template: shippingFormTemplate,
