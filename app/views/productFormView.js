@@ -1,14 +1,14 @@
 import {View} from 'backbone.marionette';
 import productFormTemplate from '../templates/productFormTemplate.hbs';
 import setModelState from '../helpers/setModelState';
-import {sizeSelectCollection} from '../collections/selectCollection';
+import {sizeSelectCollection, colorSelectCollection} from '../collections/selectCollection';
 import SelectView from './selectView';
 
 const ProductFormView = View.extend({
   template: productFormTemplate,
   regions: {
     sizeSelect: '#sizeSelect',
-    // colorSelect: '#colorSelect'
+    colorSelect: '#colorSelect'
   },
   events: {
     'submit': 'onSubmit'
@@ -25,13 +25,14 @@ const ProductFormView = View.extend({
 
   onRender: function() {
     this.showChildView('sizeSelect', new SelectView({collection: sizeSelectCollection, attributes: {name: 'size'}}));
+    this.showChildView('colorSelect', new SelectView({collection: colorSelectCollection, attributes: {name: 'color'}}));
   },
 
   onSubmit: function(e) {
     e.preventDefault();
     const selects = {
       size: 'sizeSelect',
-      // color: 'colorSelect'
+      color: 'colorSelect'
   }
     setModelState.apply(this, [e, selects]);
   },
