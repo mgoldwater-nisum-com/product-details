@@ -1,12 +1,17 @@
 import {View} from 'backbone.marionette';
 import productFormTemplate from '../templates/productFormTemplate.hbs';
 import setModelState from '../helpers/setModelState';
-import $ from 'jquery';
+import {sizeSelectCollection} from '../collections/selectCollection';
+import SelectView from './selectView';
 
 const ProductFormView = View.extend({
   template: productFormTemplate,
+  regions: {
+    sizeSelect: '#sizeSelect',
+    // colorSelect: '#colorSelect'
+  },
   events: {
-    'submit': setModelState
+    'submit': 'onSubmit'
   },
   modelEvents: {
     'change': 'render',
@@ -18,11 +23,17 @@ const ProductFormView = View.extend({
     this.model.set('invalid', true);
   },
 
-  onRender: function(){
-    // $('#size[selected]').attr('selected', false);
-    // $('#size').val(this.model.get('size')).attr('selected', true);
-    // $('#color[selected]').attr('selected', false);
-    // $('#color').val(this.model.get('color')).attr('selected', true);
+  onRender: function() {
+    this.showChildView('sizeSelect', new SelectView({collection: sizeSelectCollection, attributes: {name: 'size'}}));
+  },
+
+  onSubmit: function(e) {
+    e.preventDefault();
+    const selects = {
+      size: 'sizeSelect',
+      // color: 'colorSelect'
+  }
+    setModelState.apply(this, [e, selects]);
   },
 
   onSync: function() {
