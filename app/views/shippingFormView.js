@@ -1,7 +1,7 @@
 import {View} from 'backbone.marionette';
 import shippingFormTemplate from '../templates/shippingFormTemplate.hbs';
 import setModelState from '../helpers/setModelState';
-import StateSelectView from './stateSelectView';
+import SelectView from './SelectView';
 import stateSelectCollection from '../collections/stateSelectCollection';
 console.log('stateSelectCollection is: ', stateSelectCollection)
 
@@ -34,7 +34,7 @@ const ShippingFormView = View.extend({
     }
   },
   onRender: function() {
-    this.showChildView('stateSelect', new StateSelectView({collection: stateSelectCollection, className: 'shippingSelect', attributes: {name: 'state'}}));
+    this.showChildView('stateSelect', new SelectView({collection: stateSelectCollection, className: 'shippingSelect', attributes: {name: 'state'}}));
   },
 
   onSync: function() {
