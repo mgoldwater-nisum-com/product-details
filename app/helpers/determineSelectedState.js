@@ -1,4 +1,4 @@
-const stateData = [{item: 'Alabama'}, {item: 'Alaska'}]
+const stateData = [{item: 'Alabama', value: 'AL'}, {item: 'Alaska', value: 'AK'}]
 
 export default stateData;
 
