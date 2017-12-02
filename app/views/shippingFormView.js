@@ -1,8 +1,8 @@
 import {View} from 'backbone.marionette';
 import shippingFormTemplate from '../templates/shippingFormTemplate.hbs';
 import setModelState from '../helpers/setModelState';
-import SelectView from './SelectView';
-import stateSelectCollection from '../collections/SelectCollection';
+import SelectView from './selectView';
+import {stateSelectCollection} from '../collections/selectCollection';
 
 const ShippingFormView = View.extend({
   template: shippingFormTemplate,
