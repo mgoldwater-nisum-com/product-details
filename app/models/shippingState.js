@@ -1,6 +1,5 @@
 import {Model} from 'backbone';
 import {LocalStorage} from 'backbone.localstorage';
-import {stateData} from '../helpers/collectionData';
 
 export const ShippingState = Model.extend({
   defaults: {
@@ -12,9 +11,7 @@ export const ShippingState = Model.extend({
     cityValid: true,
     state: '',
     zip: '',
-    zipValid: true,
-    country: '',
-    stateOptions: stateData
+    zipValid: true
   },
   localStorage: new LocalStorage('ShippingState'),
   validate: function(attrs) {
