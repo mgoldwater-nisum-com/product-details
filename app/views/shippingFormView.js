@@ -20,12 +20,6 @@ const ShippingFormView = View.extend({
     'invalid': 'onInvalid'
   },
 
-  onSubmit: function(e) {
-    e.preventDefault();
-    const selects = {state: 'stateSelect'}
-    setModelState.apply(this, [e, selects]);
-  },
-
   onInvalid: function() {
     const validationFields = new Set(['fullName', 'address', 'city', 'zip']);
     let validationErrors = this.model.validationError;
@@ -39,6 +33,12 @@ const ShippingFormView = View.extend({
   },
   onRender: function() {
     this.showChildView('stateSelect', new SelectView({collection: stateSelectCollection, className: 'shippingSelect', attributes: {name: 'state'}}));
+  },
+
+  onSubmit: function(e) {
+    e.preventDefault();
+    const selects = {state: 'stateSelect'}
+    setModelState.apply(this, [e, selects]);
   },
 
   onSync: function() {
