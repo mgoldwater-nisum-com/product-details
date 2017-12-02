@@ -1,9 +1,9 @@
 import {View} from 'backbone.marionette';
-import StateSelectTemplate from '../templates/stateSelectTemplate.hbs';
+import SelectTemplate from '../templates/selectTemplate.hbs';
 
 const SelectView = View.extend({
   tagName: 'select',
-  template: StateSelectTemplate
+  template: SelectTemplate
 })
 
 export default SelectView;
