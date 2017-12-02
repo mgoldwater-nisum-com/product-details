@@ -3,10 +3,6 @@ import StateSelectTemplate from '../templates/stateSelectTemplate.hbs';
 
 const StateSelectView = View.extend({
   tagName: 'select',
-  className: 'shippingSelect',
-  attributes: {
-    name: 'state'
-  },
   template: StateSelectTemplate
 })
 

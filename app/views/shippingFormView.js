@@ -34,7 +34,7 @@ const ShippingFormView = View.extend({
     }
   },
   onRender: function() {
-    this.showChildView('stateSelect', new StateSelectView({collection: stateSelectCollection}));
+    this.showChildView('stateSelect', new StateSelectView({collection: stateSelectCollection, className: 'shippingSelect', attributes: {name: 'state'}}));
   },
 
   onSync: function() {
