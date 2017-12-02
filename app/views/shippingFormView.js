@@ -2,24 +2,28 @@ import {View} from 'backbone.marionette';
 import shippingFormTemplate from '../templates/shippingFormTemplate.hbs';
 import setModelState from '../helpers/setModelState';
 import SelectView from './SelectView';
-import stateSelectCollection from '../collections/stateSelectCollection';
-console.log('stateSelectCollection is: ', stateSelectCollection)
+import stateSelectCollection from '../collections/SelectCollection';
 
 const ShippingFormView = View.extend({
   template: shippingFormTemplate,
 
   regions: {
-    stateSelect: '#stateSelect',
-    // countrySelect: '#countrySelect'
+    stateSelect: '#stateSelect'
   },
 
   events: {
-    'submit': setModelState
+    'submit': 'onSubmit'
   },
   modelEvents: {
     'change': 'render',
     'sync': 'onSync',
     'invalid': 'onInvalid'
+  },
+
+  onSubmit: function(e) {
+    e.preventDefault();
+    const selects = {state: 'stateSelect'}
+    setModelState.apply(this, [e, selects]);
   },
 
   onInvalid: function() {
