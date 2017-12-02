@@ -1,10 +1,9 @@
 import {Collection} from 'backbone';
-import stateData from '../helpers/determineSelectedState';
+import {stateData, sizeData} from '../helpers/collectionData';
 
 const SelectCollection = Collection.extend({
 
 });
 
-const stateSelectCollection = new SelectCollection(stateData);
-
-export default stateSelectCollection;
+export const stateSelectCollection = new SelectCollection(stateData);
+export const sizeSelectCollection = new SelectCollection(sizeData);

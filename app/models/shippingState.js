@@ -1,7 +1,7 @@
 import {Model} from 'backbone';
 import {LocalStorage} from 'backbone.localstorage';
-import stateData from '../helpers/determineSelectedState';
-// console.log('stateData is: ', stateData);
+import {stateData} from '../helpers/collectionData';
+
 export const ShippingState = Model.extend({
   defaults: {
     fullName: '',
