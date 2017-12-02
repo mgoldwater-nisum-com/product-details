@@ -1,3 +1,7 @@
 {{#each items}}
-  <option value={{value}}>{{item}}</option>
+  {{#if selected}}
+    <option value={{value}} selected>{{item}}</option>
+  {{else}}
+    <option value={{value}}>{{item}}</option>
+  {{/if}}
 {{/each}}

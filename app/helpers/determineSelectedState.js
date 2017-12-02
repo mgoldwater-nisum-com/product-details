@@ -1,4 +1,4 @@
-const stateData = [{item: 'Alabama', value: 'AL'}, {item: 'Alaska', value: 'AK'}]
+const stateData = [{item: 'Alabama', value: 'AL', selected: false}, {item: 'Alaska', value: 'AK', selected: true}]
 
 export default stateData;
 
