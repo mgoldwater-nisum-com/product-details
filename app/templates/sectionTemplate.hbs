@@ -4,13 +4,13 @@
     <form id="productForm" action=""></form>
   </section>
   <section>
-    {{#if hiddenProductForm}}
+    {{#if productFormHidden}}
       <form id="shippingForm" action="" hidden></form>
     {{else}}
       <form id="shippingForm" action=""></form>
     {{/if}}
   </section>
-  {{#if hiddenDisplayInfo}}
+  {{#if displayInfoHidden}}
     <section id="displayInfo" hidden>
       <div id="displayProductInfo"></div>
       <div id="displayShippingInfo"></div>

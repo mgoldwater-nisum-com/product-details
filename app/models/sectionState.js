@@ -2,8 +2,8 @@ import {Model} from 'backbone';
 
 const SectionState = Model.extend({
   defaults: {
-    hiddenProductForm: 'hidden',
-    hiddenDisplayInfo: 'hidden'
+    productFormHidden: 'hidden',
+    displayInfoHidden: 'hidden'
   }
 });
 

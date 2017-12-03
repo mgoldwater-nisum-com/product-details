@@ -22,11 +22,11 @@ const SectionView = View.extend({
   },
 
   onChildviewSubmitProduct: function(){
-    this.model.set('hiddenProductForm', '');
+    this.model.set('productFormHidden', false);
   },
 
   onChildviewSubmitDisplay: function(){
-    this.model.set('hiddenDisplayInfo', '');
+    this.model.set('displayInfoHidden', false);
   },
 
   onRender() {
